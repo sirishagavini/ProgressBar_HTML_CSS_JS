@@ -1,2 +1,3 @@
 # ProgressBar_HTML_CSS_JS
-This Project uses plain javascript, pure css and HTML.
+This app has a runtime set to 5secs and it is progress Bar created just using plain javascript, pure css and HTML.
+
