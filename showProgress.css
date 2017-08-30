@@ -1,0 +1,10 @@
+#myProgress {
+background-color: black;
+width: 200px;
+padding: 1% 0% 1% 0%;
+margin-bottom: 2%;
+position: relative;
+}
+#incrementer {
+background-color: green;
+}
