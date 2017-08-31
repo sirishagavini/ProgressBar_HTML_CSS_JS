@@ -1,49 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Having meta tag is always important in case of responsivedesign -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-/**
-* @desc - A function to show status of progress bar of width 200 in 5secs
-**/
-function setProgressBar() {
-//setting current width to 0 on page load
-var myCurrentWidth = 0;
-//setting Interval of 1sec to increase the progress bar
-var myInt = setInterval(function() {
-//continue the progress if the progress is not max
-if(myCurrentWidth !== 200) {
-myCurrentWidth = myCurrentWidth + 40;
-document.getElementById("incrementer").innerHTML = "Progressing";
-document.getElementById("incrementer").style.width = myCurrentWidth +"px";
-}
-//clear the interval if the progress has reached max (other wise interval will run on the background forever)
-if(myCurrentWidth === 200)  {
-		 clearInterval(myInt);
-		document.getElementById("incrementer").innerHTML = "Progressed";
-}
-},1000);
-}</script>
-
-<style>
-#myProgress {
-background-color: black;
-width: 200px;
-padding: 1% 0% 1% 0%;
-margin-bottom: 2%;
-position: relative;
-}
-#incrementer {
-background-color: green;
-}
-</style>
+<!-- always have js file outside of html for best code practise-->
+<script src="showProgress_js.js"></script>
+<!-- Never have an internal or inline css unless it is very needed -->
+<link rel="stylesheet" type="text/css" href="showProgress.css">
 </head>
 <body>
-
 <div id="myProgress"> 
 <div id="incrementer"> </div>
 </div>
-<button onclick="myFunction()">Start Progressing</button>
-
+<!-- calling the function setProgressBar() written in JS file on click of button-->
+<button onclick="setProgressBar()">Start Progressing</button>
 </body>
 </html>
